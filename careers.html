@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Care Flight</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/careers.css">
+</head>
+<body>
+	<div class="header container">
+		<div class="row">
+			<!-- One row is divided into two columns in the case of a large screen, and one row in the case of a small screen-->
+			<div class="col-sm-6 col-xs-12 logo">
+				<img src="images/res_img-(4).png">
+				<span>&emsp;Care Flight</span>
+			</div>
+			<div class="col-sm-6 col-xs-12 menu">
+				<ul>
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="careers.html">Careers</a>
+					</li>
+					<li>
+						<a href="supportus.html">Support us</a>
+					</li>
+					<li>
+						<a href="contactus.html">Contact us</a>
+					</li>
+					<li class="login text-center">
+						<a href="contactus.html">Log in</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="container">
+			<div class="banner-main">
+				<img src="images/res_img (11).jpg">
+				<div class="banner-info xs-hide">
+					<h3>WORK WITH US</h3>
+					<p>CareFlight offers a variety of challenging and exciting career <br>
+					opportunities in medicine, aviation and support services.</p>
+				</div>
+			</div>
+			<div class="banner-info-xs xs-show">
+				<h3>WORK WITH US</h3>
+				<p>CareFlight offers a variety of challenging and exciting career 
+				opportunities in medicine, aviation and support services.</p>
+			</div>
+		</div>
+	</div>
+	<div class="tab1 xs-hide">
+		<div class="container">
+			<!-- <h2 class="text-center">Prices reviews</h2> -->
+			<div class="tab1-main row" id="tab1-main-sm">
+				<!-- One row is divided into three columns in the case of a large screen, and disappears in the case of a small screen-->
+				<div class="col-sm-4 xs-hide tab1-main-left text-center">
+					<h4 id="tab1-h4-01">Human Resources Coordinator</h4>
+					<img src="images/res_img (7).jpg">
+					<p>Closing date: 29/12/2020</p>
+					<p>Location: Sydney Metropolitan</p>
+					<p>Work Type: Permanent - Full Time</p>
+					<button>Learn More</button>
+				</div>
+				<div class="col-sm-4 col-xs-12 tab1-main-mid text-center">
+					<h4 id="tab1-h4-02">Aircrew Officer - Expression of Interest</h4>
+					<img src="images/res_img (2).jpg">
+					<p>Closing date: 29/12/2020</p>
+					<p>Location: Sydney Metropolitan</p>
+					<p>Work Type: Permanent - Full Time</p>
+					<button>Learn More</button>
+				</div>
+				<div class="col-sm-4 xs-hide tab1-main-right text-center">
+					<h4 id="tab1-h4-03">Project Manager</h4>
+					<img src="images/res_img (12).jpg">
+					<p>Closing date: 29/12/2020</p>
+					<p>Location: Sydney Metropolitan</p>
+					<p>Work Type: Permanent - Full Time</p>
+					<button>Learn More</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="tab1 xs-show">
+		<div class="container">
+			<!-- <h2 class="text-center">Prices reviews</h2> -->
+			<div class="tab1-main row" id="tab1-main-xs">
+				<!-- A row of small screens is divided into three columns, and the large screens disappear-->
+				<div class="col-sm-4 tab1-main-left text-center">
+					<h4  id="tab1-h4-01-xs">Human Resources Coordinator</h4>
+					<img src="images/res_img (7).jpg">
+					<p>Closing date: 29/12/2020</p>
+					<p>Location: Sydney Metropolitan</p>
+					<p>Work Type: Permanent - Full Time</p>
+					<button>Learn More</button>
+				</div>
+				<div class="col-sm-4 tab1-main-mid text-center" id="tab1-mid">
+					<h4 id="tab1-h4-02-xs">Aircrew Officer - Expression of Interest</h4>
+					<img src="images/res_img (2).jpg">
+					<p>Closing date: 29/12/2020</p>
+					<p>Location: Sydney Metropolitan</p>
+					<p>Work Type: Permanent - Full Time</p>
+					<button>Learn More</button>
+				</div>
+				<div class="col-sm-4 tab1-main-right text-center">
+					<h4 id="tab1-h4-03-xs">Project Manager</h4>
+					<img src="images/res_img (12).jpg">
+					<p>Closing date: 29/12/2020</p>
+					<p>Location: Sydney Metropolitan</p>
+					<p>Work Type: Permanent - Full Time</p>
+					<button>Learn More</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="footer">
+		<div class="container">
+			<ul class="text-center">
+				<li><a href="#"><img src="images/facebook.png"></a></li>
+				<li><a href="#"><img src="images/twitter.png"></a></li>
+				<li><a href="#"><img src="images/in.png"></a></li>
+				<li><a href="#"><img src="images/a.png"></a></li>
+			</ul>
+		</div>
+	</div> 
+
+	<script type="text/javascript">
+		// Carousel effect scroll timer (in case of small screen)
+		var interval = null
+		// Carousel effect scroll timer (in the case of large screen)
+		var intervalSm = null
+		window.onload = ()=>{
+			//The initial width of the small screen (for compatibility with project requirements: the carousel interface displayed under the large screen and the small screen is different)
+			initSize()
+			// The big screen carousel starts to scroll
+			doMove()
+			//Set the height of three modules (to solve the problem of height misalignment caused by different contents)
+			autoHeightSm()
+			autoHeightXs()
+			// Small screen carousel starts to scroll
+			doMoveSm()
+		}
+
+		window.onresize = ()=>{
+			if(document.body.clientWidth < 768){
+				initSize()
+				doMove()
+				autoHeightXs()
+			}else{
+				doMoveSm()
+			}
+			autoHeightSm()
+			
+		}
+		/*
+			Solve the problem of different heights and misalignment of the three modules due to different contents in the case of a large screen.
+			*/
+			function autoHeightSm(){
+				let h1 = document.getElementById("tab1-h4-01").offsetHeight
+				let h2 = document.getElementById("tab1-h4-02").offsetHeight
+				let h3 = document.getElementById("tab1-h4-03").offsetHeight
+				let max = h1>h2?(h1>h3?h1:h3):(h2>h3?h2:h3)
+			// document.getElementById("tab1-h4-01").style.setProperty("line-height", h2+"px")
+			document.getElementById("tab1-h4-03").style.setProperty("line-height", max+"px")
+			document.getElementById("tab1-h4-01").style.setProperty("height", max+"px")
+			document.getElementById("tab1-h4-03").style.setProperty("height", max+"px")
+			document.getElementById("tab1-h4-02").style.setProperty("height", max+"px")
+		}
+
+		/*
+			Solve the problem of different heights and misalignment of the three modules due to different contents in the case of a small screen.
+			*/
+			function autoHeightXs(){
+				let h1 = document.getElementById("tab1-h4-01-xs").offsetHeight
+				let h2 = document.getElementById("tab1-h4-02-xs").offsetHeight
+				let h3 = document.getElementById("tab1-h4-03-xs").offsetHeight
+				let max = h1>h2?(h1>h3?h1:h3):(h2>h3?h2:h3)
+			// document.getElementById("tab1-h4-01").style.setProperty("line-height", h2+"px")
+			document.getElementById("tab1-h4-03-xs").style.setProperty("line-height", max+"px")
+			document.getElementById("tab1-h4-01-xs").style.setProperty("height", max+"px")
+			document.getElementById("tab1-h4-03-xs").style.setProperty("height", max+"px")
+			document.getElementById("tab1-h4-02-xs").style.setProperty("height", max+"px")
+		}
+
+		/*
+			In the project requirements, when the small screen is required, the carousel can be scrolled left and right, and the left and right content can be displayed directly. So set the width and overall module offset.
+			*/
+			function initSize(){
+				let tab = document.getElementById("tab1-main-xs")
+				let tabs = tab.getElementsByTagName("div")
+				let eLen = document.body.clientWidth * 0.8
+				for (var i = tabs.length - 1; i >= 0; i--) {
+					tabs[i].style.setProperty("width", eLen+"px")
+				}
+				tab.style.setProperty("width", eLen * 3+"px")
+				tab.style.setProperty("transform", "translate(-"+eLen+"px,0)")
+			}
+
+		/*
+			Carousel starts to scroll in small screen
+			*/
+			function doMove(){
+				clearInterval(interval)
+				interval = setInterval(()=>{
+					moveAction()
+				},2000)
+			}
+
+		/*
+			The specific implementation of small screen carousel scrolling
+			*/
+			function moveAction(){
+				let tab = document.getElementById("tab1-main-xs")
+				let tabs = tab.getElementsByTagName("div")
+				let tab0 = tab.getElementsByTagName("div")[0].innerHTML
+				tab.getElementsByTagName("div")[0].innerHTML = tabs[1].innerHTML
+				tab.getElementsByTagName("div")[1].innerHTML = tabs[2].innerHTML
+				tab.getElementsByTagName("div")[2].innerHTML = tab0
+			}
+
+		/*
+			The carousel starts to scroll on a large screen
+			*/
+			function doMoveSm(){
+				clearInterval(intervalSm)
+				intervalSm = setInterval(()=>{
+					moveActionSm()
+				},2000)
+			}
+
+		/*
+			The specific implementation of large-screen carousel scrolling
+			*/
+			function moveActionSm(){
+				let tab = document.getElementById("tab1-main-sm")
+				let tabs = tab.getElementsByTagName("div")
+				let tab0 = tab.getElementsByTagName("div")[0].innerHTML
+				tab.getElementsByTagName("div")[0].innerHTML = tabs[1].innerHTML
+				tab.getElementsByTagName("div")[1].innerHTML = tabs[2].innerHTML
+				tab.getElementsByTagName("div")[2].innerHTML = tab0
+			}
+		</script>
+	</body>
+	</html>

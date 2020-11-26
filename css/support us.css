@@ -1,0 +1,588 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Comic Sans MS";
+}
+body,html{
+	overflow-x: hidden;
+}
+.text-center{
+	text-align: center;
+}
+.container{
+	width: 1170px;
+	margin: 0 auto;
+
+}
+.pull-left{
+	float: left !important;
+}
+.pull-right{
+	float: right !important;
+}
+.clear::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.row{
+
+}
+
+.row::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.col-xs-12,.col-sm-3,.col-sm-4,.col-sm-6,.col-sm-2,.col-xs-6{
+	float: left;
+	min-height: 1px;
+}
+.col-sm-2{
+	width: 16.6%;
+}
+.col-sm-6{
+	width: 50%;
+}
+
+.col-sm-3{
+	width: 25%;
+}
+
+.col-sm-4{
+	width: 33.3%;
+	padding-right: 15px;
+	padding-left: 15px;
+	box-sizing: border-box;
+}
+
+.line-hr{
+	width: 120%;
+	border: 2px solid #333;
+	margin-left: -10%;
+}
+.line-xs-hr{
+	width: 60%;
+	border: 2px solid #333;
+	margin: 0 auto;
+}
+.xs-show{
+	display: none;
+}
+.xs-hide{
+	display: block;
+}
+.header{
+	margin-top: 30px;
+}
+.logo{
+	
+}
+.logo img{
+	width: 80px;
+	height: 80px;
+	margin-left: 10px;
+	display: inline-block;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.logo span{
+	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.menu ul{
+	line-height: 80px;
+	position: relative;
+}
+.menu ul li{
+	display: inline-block;
+	margin-left: 8px;
+	margin-right: 36px;
+}
+.menu ul li.login{
+	position: absolute;
+	right: -120px;
+}
+.menu ul li.login a{
+	padding: 0px 35px;
+	padding-bottom: 2px;
+	border: 4px solid #000;
+	border-right: 0px;
+	box-sizing: border-box;
+}
+.menu ul li a{
+	text-decoration: none;
+	color: #333;
+	font-size: 20px;
+	font-weight: bold;
+}
+.banner{
+	margin-top: 40px;
+}
+.banner h2{
+	font-size: 3.2vw;
+	margin-bottom: 40px;
+}
+.banner-main{
+	background: url("../images/res_img (3).jpg");
+	background-size: 100%;
+	border-radius: 50px;
+	position: relative;
+}
+
+.banner-main img{
+	width: 100%;
+	display: block;
+	opacity: 0;
+}
+.banner-info{
+	position: absolute;
+	left: 7%;
+	bottom: 10%;
+	padding: 34px 50px;
+	background: #239EC6;
+	border-radius: 30px;
+}
+.banner-info h3{
+	color: #FFDB5D;
+	font-size: 2.2vw;
+
+}
+.banner-info p{
+	color: #333;
+	font-size: 1.0vw;
+	font-weight: bold;
+}
+.tab1{
+	padding-top: 50px;
+}
+.tab1-item{
+	padding: 40px 0;
+}
+.tab1-item div{
+	padding: 2px 10%;
+	box-sizing: border-box;
+}
+.tab1-item-mid div{
+	border-left: 3px solid #333;
+	border-right: 3px solid #333;
+}
+
+.tab1 .tab1-item img{
+	width: 64px;
+	display: block;
+	margin: 0 auto;
+}
+
+.tab1 .tab1-item h5{
+	font-size: 2em;
+	color: #111;
+	margin: 20px 0;
+	font-weight: normal;
+}
+.tab1 .tab1-item p{
+	font-size: 1.6em;
+	color: #111;
+	line-height: 1.6em;
+}
+.tab1-item>div{
+	position: relative;
+}
+.tab1 .tab1-item button{
+	position: absolute;
+	bottom: 0;
+	margin-top: 20px;
+	border:3px solid #333;
+	padding: 6px 10px;
+	font-size: 1.0vw;
+	background: #fff;
+}
+
+.tab2{
+	margin: 100px 0;
+}
+.tab2-main{
+	padding: 0 5%;
+}
+.tab2-main h3{
+	font-size: 2.2vw;
+}
+.tab2-main p{
+	margin-top: 20px;
+	font-size: 1.2vw;
+}
+
+
+.tab3-main img{
+	width: 100%;
+	display: block;
+}
+.tab3-main>div{
+	position: relative;
+}
+.tab3-main>div>.hide-box{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.6);
+	overflow: hidden;
+	opacity: 0;
+}
+.tab3-main>div:hover .hide-box{
+	opacity: 1;
+	transition: all 0.5s;
+}
+.tab3-main>div>.hide-box>p{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 1.2vw;
+}
+.tab4{
+	margin-top: 70px;
+	padding-bottom: 70px;
+}
+.tab4 h3{
+	font-size: 2.6vw;
+	margin: 30px 0;
+}
+.tab4-main img{
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+	background: #999;
+}
+.tab4-main iframe{
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+}
+.tab4-main p{
+	margin-bottom: 1em;
+	font-size: 1em;
+	font-size: 1.2em;
+	line-height: 1.4em;
+}
+.tab4-main button{
+	padding: 6px 20px;
+	background: #fff;
+	border: 3px solid #333;
+	font-size: 2.0vw;
+}
+.tab6{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.tab6-main{
+	position: relative;
+}
+.tab6-main h3{
+	position: absolute;
+	font-size: 1.5vw;
+	
+}
+.tab6-main ul li{
+	list-style: none;
+	margin-bottom: 16px;
+}
+.tab6-main ul li.title{
+	margin-bottom: 30px;
+}
+.tab6-main ul li.title a{
+	text-decoration: none;
+	font-size: 1.2vw;
+	font-weight: bold;
+	color: #333;
+	
+}
+.tab6-main ul li a{
+	text-decoration: none;
+	font-size: 1.0vw;
+	color: #999;
+}
+
+
+
+.footer{
+	padding: 60px 0;
+}
+.footer ul li{
+	display: inline-block;
+	margin: 0 40px;
+}
+@media (max-width: 1170px) {
+	body,html{
+		overflow-x: hidden;
+	}
+	.container{
+		width: 100%;
+		
+	}
+	.menu ul li{
+		margin-right: 1vw;
+		margin-left: 0px;
+	}
+	.menu ul li a{
+		font-size: 2vw;
+	}
+	.menu ul li.login{
+		position: static;
+	}
+	.menu ul li.login a{
+		padding: 0px  1vw;
+		padding-bottom: 2px;
+		border: 4px solid #000;
+		box-sizing: border-box;
+	}
+	.banner h2{
+		font-size: 4.2vw;
+		margin-bottom: 40px;
+	}
+
+	.banner-info h3{
+		color: #FFDB5D;
+		font-size: 2.4vw;
+	}
+	.banner-info p{
+		color: #333;
+		font-size: 1.2vw;
+		font-weight: bold;
+	}
+
+
+	.tab1 .tab1-item h5{
+		font-size: 1.8em;
+	}
+	.tab1 .tab1-item p{
+		font-size: 1.6em;
+	}
+	.tab1 .tab1-item button{
+		font-size: 1.4vw;
+	}
+
+	.tab2{
+		margin: 100px 0;
+	}
+	.tab2-main h3{
+		font-size: 3.0vw;
+	}
+	.tab2-main p{
+		font-size: 2.0vw;
+	}
+
+	.tab3-main>div>.hide-box>p{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #fff;
+		font-size: 2.2vw;
+	}
+
+	.tab6-main h3{
+		position: absolute;
+		font-size: 2vw;
+		padding-left: 20px;
+		
+	}
+	.tab6-main ul li.title a{
+		font-size: 1.8vw;
+		
+	}
+	.tab6-main ul li a{
+		text-decoration: none;
+		font-size: 1.6vw;
+	}
+
+
+
+}
+
+@media (max-width: 768px) {
+	.xs-show{
+		display: block;
+	}
+	.xs-hide{
+		display: none;
+	}
+	.col-xs-6{
+		width: 50%;
+	}
+	.col-xs-12{
+		width: 100%;
+	}
+	.line-hr{
+		border: 0;
+		margin:0;
+	}
+	.logo{
+		padding-top: 20px;
+		text-align: center;
+	}
+	.logo img{
+		width: 75px;
+		height: 75px;
+	}
+	.logo span{
+		display: block;
+		font-size: 8vw;
+		padding-top: 20px;
+	}
+	.menu ul{
+		text-align: center;
+		line-height: normal;
+		margin-top: 20px;
+	}
+	.menu ul li{
+		line-height: normal;
+		margin: 10px 3vw;
+	}
+	.menu ul li a{
+		font-size: 4vw;
+	}
+	.menu ul li.login{
+		position: static;
+		display: block;
+		text-align: center;
+	}
+	.menu ul li.login a{
+		padding: 0px  8vw;
+		padding-bottom: 2px;
+		border: 4px solid #000;
+		box-sizing: border-box;
+
+	}
+	.banner h2{
+		font-size: 6.0vw;
+
+	}
+	.banner-info-xs {
+		padding-left: 5%;
+		padding-right: 5%;
+		margin-top: 20px;
+		margin-bottom: 60px;
+	}
+	.banner-info-xs h3{
+		color: #333;
+		font-size: 6.0vw;
+		
+	}
+	.banner-info-xs p{
+		color: #333;
+		font-size: 3.0vw;
+		
+	}
+
+	.tab1{
+		padding-top: 0;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.tab1-item{
+		padding: 0;
+		padding-bottom: 80px;
+		padding-top: 80px;
+	}
+	.tab1-item div{
+		padding: 2px 10%;
+		box-sizing: border-box;
+	}
+
+	.tab1 .tab1-item img{
+		width: 100px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.tab1 .tab1-item h5{
+		font-size: 4.8vw;
+	}
+	.tab1 .tab1-item p{
+		font-size: 4.6vw;
+		line-height: 1.4em;
+	}
+	.tab1 .tab1-item button{
+		margin-top: 40px;
+		border:3px solid #333;
+		padding: 4px 16px;
+		font-size: 2.4vw;
+	}
+	.tab1-item-mid{
+		border:0;
+	}
+	
+	.tab1-item-mid div{
+		border: 0px;
+		
+	}
+
+	.tab2{
+		
+	}
+	.tab2-main{
+		padding: 0 5%;
+	}
+	.tab2-main h3{
+		font-size: 8vw;
+		font-weight: normal;
+	}
+	.tab2-main p{
+		margin-top: 20px;
+		font-size: 3.6vw;
+	}
+
+	.tab3-main>div>.hide-box>p{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #fff;
+		font-size: 4.2vw;
+	}
+
+	.tab4{
+		margin-top: 80px;
+	}
+	.tab4 h3{
+		font-size: 5.6vw;
+		margin: 20px 0;
+	}
+	.tab4-main img{
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+
+	.tab4-main iframe{
+
+		margin-bottom: 40px;
+	}
+	.tab4-main p{
+		padding: 0 12%;
+		margin-top: 20px;
+		font-size: 3.6vw;
+		margin-bottom: 2em;
+		line-height: 1.4em;
+
+	}
+	.tab4-main button{
+		font-size: 3.2vw;
+	}
+
+	.footer{
+		padding: 5vw 0;
+
+	}
+	.footer ul li{
+		display: inline-block;
+		margin: 0 3.6vw;
+	}
+}
